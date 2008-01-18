@@ -1,0 +1,120 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D742E28-97A1-47FF-B417-89972E3FB071}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SE.Halligang.CsXmpToolkit</RootNamespace>
+    <AssemblyName>CsXmpToolkit</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\CsXmpToolkit.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\CsXmpToolkit.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\PInvoke\XmpDateTime.cs" />
+    <Compile Include="Classes\XmpDateTime.cs" />
+    <Compile Include="Delegates\AbortDelegate.cs" />
+    <Compile Include="Delegates\PInvoke\TextOutputDelegate.cs" />
+    <Compile Include="Enums\AppendMode.cs" />
+    <Compile Include="Enums\ArrayItemFlags.cs" />
+    <Compile Include="Enums\CloseFlags.cs" />
+    <Compile Include="Enums\FileFormat.cs" />
+    <Compile Include="Enums\FormatInfo.cs" />
+    <Compile Include="Enums\IteratorMode.cs" />
+    <Compile Include="Enums\IteratorSkipMode.cs" />
+    <Compile Include="Enums\OpenFlags.cs" />
+    <Compile Include="Classes\PacketInfo.cs" />
+    <Compile Include="Classes\PInvoke\PacketInfo.cs" />
+    <Compile Include="Classes\PInvoke\ThumbnailInfo.cs" />
+    <Compile Include="Classes\PInvoke\XmpVersionInfo.cs" />
+    <Compile Include="Enums\ParseFlags.cs" />
+    <Compile Include="Enums\PInvoke\TimeZoneSign.cs" />
+    <Compile Include="Enums\PropertyFlags.cs" />
+    <Compile Include="Enums\RemoveMode.cs" />
+    <Compile Include="Enums\SerializeFlags.cs" />
+    <Compile Include="Schemas\Collections\LangEntryEnumerator.cs" />
+    <Compile Include="Schemas\Collections\XmpArray.cs" />
+    <Compile Include="Schemas\Collections\XmpArrayCallback.cs" />
+    <Compile Include="Schemas\Collections\XmpArrayCallbackType.cs" />
+    <Compile Include="Schemas\Collections\XmpLangAlt.cs" />
+    <Compile Include="Schemas\Schemas\PersonalClassification.cs" />
+    <Compile Include="Schemas\Schemas\CommonFields.cs" />
+    <Compile Include="Schemas\Schemas\ExifTiff.cs" />
+    <Compile Include="Schemas\Schemas\ExifSpecific.cs" />
+    <Compile Include="Schemas\Schemas\ExifAdditional.cs" />
+    <Compile Include="Schemas\Schemas\ImageMap.cs" />
+    <Compile Include="Schemas\Schemas\Iptc.cs" />
+    <Compile Include="Schemas\Schemas\Pdf.cs" />
+    <Compile Include="Schemas\Schemas\Photoshop.cs" />
+    <Compile Include="Schemas\Schemas\Raw.cs" />
+    <Compile Include="Schemas\ValueTypes\Area.cs" />
+    <Compile Include="Schemas\ValueTypes\Classification.cs" />
+    <Compile Include="Schemas\ValueTypes\ClassificationType.cs" />
+    <Compile Include="Schemas\ValueTypes\ContactInfo.cs" />
+    <Compile Include="Schemas\ValueTypes\Dimensions.cs" />
+    <Compile Include="Schemas\ValueTypes\Job.cs" />
+    <Compile Include="Schemas\ValueTypes\LangEntry.cs" />
+    <Compile Include="Schemas\ValueTypes\ShapeType.cs" />
+    <Compile Include="Schemas\ValueTypes\Thumbnail.cs" />
+    <Compile Include="Schemas\Xmp.cs" />
+    <Compile Include="Schemas\Schemas\XmpBasic.cs" />
+    <Compile Include="Schemas\Schemas\DublinCore.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schemas\Schemas\XmpDynamic.cs" />
+    <Compile Include="Schemas\Schemas\XmpMedia.cs" />
+    <Compile Include="Schemas\Schemas\XmpRights.cs" />
+    <Compile Include="Schemas\Schemas\XmpText.cs" />
+    <Compile Include="Schemas\Schemas\XmpJob.cs" />
+    <Compile Include="Schemas\XmpFileMode.cs" />
+    <Compile Include="Schemas\XmpLang.cs" />
+    <Compile Include="System.Diagnostics\LogFile.cs" />
+    <Compile Include="System.Runtime.InteropServices\MarshalHelper.cs" />
+    <Compile Include="Delegates\TextOutputDelegate.cs" />
+    <Compile Include="Enums\ThumbnailFormat.cs" />
+    <Compile Include="Classes\ThumbnailInfo.cs" />
+    <Compile Include="Additions\FileFormatInfo.cs" />
+    <Compile Include="Additions\ScanningMode.cs" />
+    <Compile Include="System.Text\CsvEncoder.cs" />
+    <Compile Include="XmpCore.cs" />
+    <Compile Include="Enums\XmpErrorCode.cs" />
+    <Compile Include="Classes\XmpException.cs" />
+    <Compile Include="XmpFiles.cs" />
+    <Compile Include="Classes\XmpVersionInfo.cs" />
+    <Compile Include="XmpIterator.cs" />
+    <Compile Include="XmpUtils.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
