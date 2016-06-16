@@ -12,7 +12,6 @@
 
 #include "XMPFiles_Impl.hpp"
 #include "UnicodeConversions.hpp"
-#include "QuickTime_Support.hpp"
 
 // These are the official, fully supported handlers.
 #include "FileHandlers/JPEG_Handler.hpp"
@@ -21,7 +20,6 @@
 #include "FileHandlers/InDesign_Handler.hpp"
 #include "FileHandlers/PostScript_Handler.hpp"
 #include "FileHandlers/Scanner_Handler.hpp"
-#include "FileHandlers/MOV_Handler.hpp"
 #include "FileHandlers/MPEG_Handler.hpp"
 #include "FileHandlers/MP3_Handler.hpp"
 #include "FileHandlers/PNG_Handler.hpp"
@@ -182,10 +180,7 @@ XMPFiles::Initialize ( XMP_OptionBits options /* = 0 */ )
 
 	InitializeUnicodeConversions();
 	
-	sIgnoreQuickTime = XMP_OptionIsSet ( options, kXMPFiles_NoQuickTimeInit );
-	if ( ! sIgnoreQuickTime ) {
-		(void) QuickTime_Support::MainInitialize();	// Don't worry about failure, the MOV handler checks that.
-	}
+	sIgnoreQuickTime = true;
 	
 	// ----------------------------------------------------------------------------------
 	// First register the handlers that don't want to open and close the file themselves.
@@ -227,9 +222,6 @@ XMPFiles::Initialize ( XMP_OptionBits options /* = 0 */ )
 
 	// -----------------------------------------------------------------------------
 	// Now register the handlers that do want to open and close the file themselves.
-
-	XMP_Assert ( kMOV_HandlerFlags & kXMPFiles_HandlerOwnsFile );
-	RegisterXMPFileHandler ( kXMP_MOVFile, kMOV_HandlerFlags, MOV_CheckFormat, MOV_MetaHandlerCTor );
 
 	XMP_Assert ( kMPEG_HandlerFlags & kXMPFiles_HandlerOwnsFile );
 	RegisterXMPFileHandler ( kXMP_MPEGFile, kMPEG_HandlerFlags, MPEG_CheckFormat, MPEG_MetaHandlerCTor );
@@ -326,8 +318,6 @@ XMPFiles::Terminate()
 	--sXMPFilesInitCount;
 	if ( sXMPFilesInitCount != 0 ) return;
 
-	if ( ! sIgnoreQuickTime ) QuickTime_Support::MainTerminate();
-	
 	#if GatherPerformanceData
 		ReportPerformanceData();
 		EliminateGlobal ( sAPIPerf );
