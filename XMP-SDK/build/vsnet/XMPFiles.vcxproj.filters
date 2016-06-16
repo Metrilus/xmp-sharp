@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Common Code">
+      <UniqueIdentifier>{7dd0f8b1-185b-4e98-88a4-18f4cf2c0d7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\File Handlers">
+      <UniqueIdentifier>{649db368-207d-4d45-aee1-f0844b254d76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Format Support">
+      <UniqueIdentifier>{73b49c4d-a100-4551-b2ca-6d7d0853d628}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\XMPFiles\WXMPFiles.cpp">
+      <Filter>Source Files\Common Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\XMPFiles.cpp">
+      <Filter>Source Files\Common Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\XMPFiles_Impl.cpp">
+      <Filter>Source Files\Common Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FileHandlers\AVI_Handler.cpp">
+      <Filter>Source Files\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FileHandlers\Basic_Handler.cpp">
+      <Filter>Source Files\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FileHandlers\InDesign_Handler.cpp">
+      <Filter>Source Files\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FileHandlers\JPEG_Handler.cpp">
+      <Filter>Source Files\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FileHandlers\MP3_Handler.cpp">
+      <Filter>Source Files\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FileHandlers\MPEG_Handler.cpp">
+      <Filter>Source Files\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FileHandlers\PNG_Handler.cpp">
+      <Filter>Source Files\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FileHandlers\PostScript_Handler.cpp">
+      <Filter>Source Files\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FileHandlers\PSD_Handler.cpp">
+      <Filter>Source Files\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FileHandlers\Scanner_Handler.cpp">
+      <Filter>Source Files\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FileHandlers\TIFF_Handler.cpp">
+      <Filter>Source Files\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FileHandlers\Trivial_Handler.cpp">
+      <Filter>Source Files\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FileHandlers\WAV_Handler.cpp">
+      <Filter>Source Files\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FormatSupport\ID3_Support.cpp">
+      <Filter>Source Files\Format Support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FormatSupport\IPTC_Support.cpp">
+      <Filter>Source Files\Format Support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FormatSupport\PNG_Support.cpp">
+      <Filter>Source Files\Format Support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FormatSupport\PSIR_FileWriter.cpp">
+      <Filter>Source Files\Format Support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FormatSupport\PSIR_MemoryReader.cpp">
+      <Filter>Source Files\Format Support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FormatSupport\Reconcile_Impl.cpp">
+      <Filter>Source Files\Format Support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FormatSupport\ReconcileIPTC.cpp">
+      <Filter>Source Files\Format Support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FormatSupport\ReconcileLegacy.cpp">
+      <Filter>Source Files\Format Support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FormatSupport\ReconcileTIFF.cpp">
+      <Filter>Source Files\Format Support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FormatSupport\RIFF_Support.cpp">
+      <Filter>Source Files\Format Support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FormatSupport\TIFF_FileWriter.cpp">
+      <Filter>Source Files\Format Support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FormatSupport\TIFF_MemoryReader.cpp">
+      <Filter>Source Files\Format Support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FormatSupport\TIFF_Support.cpp">
+      <Filter>Source Files\Format Support</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPFiles\FormatSupport\XMPScanner.cpp">
+      <Filter>Source Files\Format Support</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
