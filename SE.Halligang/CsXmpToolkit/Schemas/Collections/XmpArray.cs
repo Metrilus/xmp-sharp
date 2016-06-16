@@ -190,6 +190,10 @@ namespace SE.Halligang.CsXmpToolkit.Schemas
 					XmpIterator iterator = new XmpIterator(xmpCore, schemaNamespace, propertyPath, IteratorMode.JustChildren);
 					while (iterator.Next(out schemaNS, out propPath, out propValue, out options))
 					{
+						if (string.IsNullOrEmpty(propPath))
+						{
+							break;
+						}
 						if (propPath.IndexOf('[') >= 0 && propPath.IndexOf(']') >= 0)
 						{
 							items.Add(propValue);
@@ -244,6 +248,10 @@ namespace SE.Halligang.CsXmpToolkit.Schemas
 					XmpIterator iterator = new XmpIterator(xmpCore, schemaNamespace, propertyPath, IteratorMode.JustChildren);
 					while (iterator.Next(out schemaNS, out propPath, out propValue, out options))
 					{
+						if (string.IsNullOrEmpty(propPath))
+						{
+							break;
+						}
 						if (propPath.IndexOf('[') >= 0 && propPath.IndexOf(']') >= 0)
 						{							
 							items.Add(XmpDateTime.XmpStringToDateTime(propValue));
@@ -298,6 +306,10 @@ namespace SE.Halligang.CsXmpToolkit.Schemas
 					XmpIterator iterator = new XmpIterator(xmpCore, schemaNamespace, propertyPath, IteratorMode.JustChildren);
 					while (iterator.Next(out schemaNS, out propPath, out propValue, out options))
 					{
+						if (string.IsNullOrEmpty(propPath))
+						{
+							break;
+						}
 						if (propPath.IndexOf('[') >= 0 && propPath.IndexOf(']') >= 0)
 						{
 							items.Add(Convert.ToInt32(propValue));
